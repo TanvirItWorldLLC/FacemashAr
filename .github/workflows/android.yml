@@ -32,6 +32,10 @@ jobs:
           ndk-version: 'r26c'
           cmake-version: '3.22.1'
 
+      - name: Install Gradle
+        run: |
+          sudo apt-get update && sudo apt-get install -y gradle
+
       - name: Generate Gradle Wrapper
         run: |
           gradle wrapper --gradle-version 8.5 --distribution-type all
@@ -85,6 +89,8 @@ jobs:
       - uses: android-actions/setup-android@v3
         with:
           api-level: 34
+      - name: Install Gradle
+        run: sudo apt-get update && sudo apt-get install -y gradle
       - name: Generate Gradle Wrapper
         run: gradle wrapper --gradle-version 8.5 --distribution-type all
       - name: Download Face Landmarker model
@@ -110,6 +116,8 @@ jobs:
       - uses: android-actions/setup-android@v3
         with:
           api-level: 34
+      - name: Install Gradle
+        run: sudo apt-get update && sudo apt-get install -y gradle
       - name: Generate Gradle Wrapper
         run: gradle wrapper --gradle-version 8.5 --distribution-type all
       - name: Download Face Landmarker model
