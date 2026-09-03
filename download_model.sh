@@ -9,6 +9,13 @@ MODEL_FILE="face_landmarker.task"
 echo "Creating assets directory..."
 mkdir -p "$OUTPUT_DIR"
 
+# Skip if model already exists (e.g., in CI cache)
+if [ -f "$OUTPUT_DIR/$MODEL_FILE" ]; then
+    SIZE=$(du -h "$OUTPUT_DIR/$MODEL_FILE" | cut -f1)
+    echo "Model already exists: $OUTPUT_DIR/$MODEL_FILE ($SIZE)"
+    exit 0
+fi
+
 echo "Downloading Face Landmarker model..."
 if command -v curl &> /dev/null; then
     curl -L -o "$OUTPUT_DIR/$MODEL_FILE" "$MODEL_URL"
