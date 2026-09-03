@@ -59,8 +59,7 @@ dependencies {
     implementation("androidx.camera:camera-view:1.3.3")
     implementation("androidx.camera:camera-video:1.3.3")
 
-    // MediaPipe Face Mesh
-    implementation("com.google.mediapipe:face-mesh:0.10.14")
+    // MediaPipe Tasks Vision (includes Face Landmarker)
     implementation("com.google.mediapipe:tasks-vision:0.10.14")
 
     // Core
@@ -72,9 +71,6 @@ dependencies {
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
-
-    // GPU Image processing
-    implementation("com.google.android.gms:play-services-mlkit-face-detection:17.1.0")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
