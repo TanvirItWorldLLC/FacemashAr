@@ -37,6 +37,9 @@ jobs:
         with:
           gradle-version: '8.5'
 
+      - name: Generate Gradle Wrapper
+        run: gradle wrapper --gradle-version 8.5 --distribution-type all
+
       - name: Verify gradle wrapper exists
         run: ls -la gradlew
 
@@ -89,6 +92,8 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.5'
+      - name: Generate Gradle Wrapper
+        run: gradle wrapper --gradle-version 8.5 --distribution-type all
       - name: Verify gradle wrapper exists
         run: ls -la gradlew
       - name: Download Face Landmarker model
@@ -115,6 +120,8 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.5'
+      - name: Generate Gradle Wrapper
+        run: gradle wrapper --gradle-version 8.5 --distribution-type all
       - name: Verify gradle wrapper exists
         run: ls -la gradlew
       - name: Download Face Landmarker model
