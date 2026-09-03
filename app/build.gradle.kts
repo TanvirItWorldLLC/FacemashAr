@@ -59,7 +59,7 @@ dependencies {
     implementation("androidx.camera:camera-view:1.3.3")
     implementation("androidx.camera:camera-video:1.3.3")
 
-    // MediaPipe Tasks Vision (includes Face Landmarker)
+    // MediaPipe Tasks Vision (includes Face Landmarker) - use latest stable
     implementation("com.google.mediapipe:tasks-vision:0.10.14")
 
     // Core
