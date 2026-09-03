@@ -1,0 +1,13 @@
+<resources>
+    <color name="primary">#00D4AA</color>
+    <color name="primary_dark">#00A888</color>
+    <color name="primary_light">#4DE8C4</color>
+    <color name="secondary">#FF6B6B</color>
+    <color name="background">#000000</color>
+    <color name="surface">#1A1A1A</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="overlay_green">#00FF88</color>
+    <color name="overlay_red">#FF3366</color>
+    <color name="overlay_blue">#00AAFF</color>
+</resources>

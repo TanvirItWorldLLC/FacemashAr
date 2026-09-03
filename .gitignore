@@ -1,0 +1,39 @@
+# Gradle
+.gradle/
+build/
+*/build/
+*/build.gradle.kts.d/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Android
+*.apk
+*.ap_
+*.aab
+*.hprof
+*.class
+local.properties
+*.keystore
+*.jks
+signing.properties
+
+# Outputs
+app/build/
+app/release/
+
+# Model (downloaded at build time)
+app/src/main/assets/face_landmarker.task
+
+# Logs
+*.log

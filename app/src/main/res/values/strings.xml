@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FaceMesh AR</string>
+    <string name="camera_permission_rationale">This app needs camera access to run face mesh detection.</string>
+    <string name="model_loading">Loading face mesh model...</string>
+    <string name="model_load_failed">Failed to load face mesh model. Please restart the app.</string>
+    <string name="camera_unavailable">Camera not available.</string>
+    <string name="face_detected">Face detected - tracking %d landmarks</string>
+    <string name="no_face_detected">No face detected. Position your face in the frame.</string>
+</resources>
