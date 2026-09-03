@@ -37,22 +37,16 @@ jobs:
         with:
           gradle-version: '8.5'
 
-      - name: Generate Gradle Wrapper
-        run: ./gradlew wrapper --gradle-version 8.5 --distribution-type all
-
       - name: Download Face Landmarker model
         run: |
           chmod +x ./download_model.sh
           ./download_model.sh
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x ./gradlew
-
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --no-daemon --stacktrace
+        run: gradle assembleDebug --no-daemon --stacktrace
 
       - name: Build Release APK
-        run: ./gradlew assembleRelease --no-daemon --stacktrace
+        run: gradle assembleRelease --no-daemon --stacktrace
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
@@ -92,19 +86,12 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.5'
-
-      - name: Generate Gradle Wrapper
-        run: ./gradlew wrapper --gradle-version 8.5 --distribution-type all
-
       - name: Download Face Landmarker model
         run: |
           chmod +x ./download_model.sh
           ./download_model.sh
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x ./gradlew
       - name: Run Lint
-        run: ./gradlew lintDebug --no-daemon --stacktrace
+        run: gradle lintDebug --no-daemon --stacktrace
 
   test:
     name: Unit Tests
@@ -123,16 +110,9 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.5'
-
-      - name: Generate Gradle Wrapper
-        run: ./gradlew wrapper --gradle-version 8.5 --distribution-type all
-
       - name: Download Face Landmarker model
         run: |
           chmod +x ./download_model.sh
           ./download_model.sh
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x ./gradlew
       - name: Run Unit Tests
-        run: ./gradlew testDebugUnitTest --no-daemon --stacktrace
+        run: gradle testDebugUnitTest --no-daemon --stacktrace
